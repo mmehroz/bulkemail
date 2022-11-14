@@ -1,0 +1,102 @@
+html,
+body {
+  //   height: 100vh;
+  //   overflow: hidden;
+  #app {
+    .form-group {
+      textarea {
+        height: calc(100vh - 180px);
+      }
+    }
+    input {
+      &.disable {
+        background-color: gray;
+        color: white;
+      }
+    }
+    .check {
+      max-height: calc(100vh - 50px);
+      overflow-y: scroll;
+      div {
+        border: 1px solid;
+      }
+      .alert-success {
+        background-color: rgba(149, 250, 149, 0.178);
+      }
+    }
+    .progress-area {
+      max-height: calc(100vh - 50px);
+      overflow-y: scroll;
+      .alert-success {
+        background-color: rgba(149, 250, 149, 0.178);
+      }
+      .progress-message {
+        display: grid;
+        grid-template-columns: auto auto;
+        .loading-container {
+          text-align: right;
+          img {
+            width: 100%;
+            max-width: 30px;
+          }
+        }
+      }
+    }
+    * {
+      outline: none !important;
+      // outline: 1px solid !important;
+      box-shadow: none !important;
+    }
+  }
+}
+
+#template {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  .close {
+    background-color: white;
+    color: red;
+    font-weight: bold;
+    border-radius: 100%;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+  }
+  background-color: rgba($color: #000000, $alpha: 0.8);
+}
+
+* {
+  outline: 1px solid;
+  ::-webkit-scrollbar {
+    width: 10px !important;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1 !important;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #0d6efd !important;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555 !important;
+  }
+}
